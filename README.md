@@ -1,11 +1,11 @@
 # SPA_web_applications
 
 # Для работы с проектом необходимо выполнить следующие действия:
--Активировать виртуальное окружение venv/bin/activate.bat
--Установить зависимости pip install -r requirements.txt
--Создать файл .env, заполнить его данными из файла env.sample
--Создать базу данных в PostreSQL CREATE DATABASE cw
--Создать python manage.py makemigrate и применить миграции python manage.py migrate
+- Активировать виртуальное окружение venv/bin/activate.bat
+- Установить зависимости pip install -r requirements.txt
+- Создать файл .env, заполнить его данными из файла env.sample
+- Создать базу данных в PostreSQL CREATE DATABASE cw
+- Создать python manage.py makemigrate и применить миграции python manage.py migrate
 Создать пользователя командой python manage.py csu
 Создать пользователя командой python manage.py user_create
 Установить и запустить Redis локально (на Windows)
