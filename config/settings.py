@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 from datetime import timedelta
 from pathlib import Path
+import os
+from dotenv import load_dotenv, find_dotenv
+import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -153,8 +156,9 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
 # Telegram API-token
-TELEGRAM_TOKEN = "6968662718:AAFoZQiB4ILclXiP_Tl6HzPE52O9kJW4HYU"
-ID_TELEGRAM = "986959236"
+load_dotenv(find_dotenv())
+TELEGRAM_TOKEN = os.getenv('TOKEN')
+
 
 CELERY_BEAT_SCHEDULE = {
     'habits_to_telegram': {
